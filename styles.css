@@ -156,6 +156,18 @@ button { border: 0; cursor: pointer; }
 .card { padding: 15px; margin: 12px 0; }
 .card h3 { margin: 0 0 6px; font-size: 18px; color: var(--gold); }
 .card p { margin: 0; color: rgba(255,255,255,0.78); line-height: 1.55; }
+.card small { color: rgba(255,255,255,0.68); line-height: 1.45; }
+
+.live-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.live-card .primary {
+  flex: 0 0 auto;
+}
 
 .module-header {
   position: relative;

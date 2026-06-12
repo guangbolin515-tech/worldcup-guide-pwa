@@ -1,10 +1,11 @@
-const CACHE_NAME = "worldcup-guide-pwa-v4";
+const CACHE_NAME = "worldcup-guide-pwa-v7";
 const CORE_ASSETS = [
   "./",
   "./index.html",
   "./styles.css",
   "./app.js",
   "./manifest.webmanifest",
+  "./football_data_cache.json",
   "./assets/seed_worldcup.json",
   "./assets/home_background.png",
   "./assets/module_header_worldcup_2026.png",
@@ -30,6 +31,8 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
+  const requestUrl = new URL(event.request.url);
+  if (requestUrl.origin !== self.location.origin) return;
   event.respondWith(
     caches.match(event.request).then((cached) => {
       if (cached) return cached;

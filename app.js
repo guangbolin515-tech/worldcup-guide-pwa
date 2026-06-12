@@ -1,5 +1,6 @@
 const DATA_URL = "./assets/seed_worldcup.json";
 const REMOTE_STATS_URL = "https://raw.giteeusercontent.com/lin-guangbo/worldcup-guide-data/raw/master/worldcup_stats.json";
+const FOOTBALL_DATA_CACHE_URL = "./football_data_cache.json";
 
 let state = {
   data: null,
@@ -10,7 +11,8 @@ let state = {
   collapsedGroups: new Set(),
   expandedGroupRecords: new Set(),
   scrollTopOnRender: true,
-  remoteStats: null
+  remoteStats: null,
+  liveSync: null
 };
 
 const app = document.querySelector("#app");
@@ -88,6 +90,9 @@ document.addEventListener("click", (event) => {
 
   const refreshStats = event.target.closest("[data-refresh-stats]");
   if (refreshStats) refreshRemoteStats();
+
+  const refreshLive = event.target.closest("[data-refresh-live]");
+  if (refreshLive) refreshFootballData();
 });
 
 document.addEventListener("submit", (event) => {
@@ -112,6 +117,8 @@ async function init() {
     stadiumMap: byId(data.stadiums)
   };
   state.remoteStats = JSON.parse(localStorage.getItem("wc_remote_stats") || "null");
+  state.liveSync = JSON.parse(localStorage.getItem("wc_live_sync") || "null");
+  if (state.liveSync?.payload) applyFootballDataPayload(state.liveSync.payload, { persist: false, silent: true });
   render();
 
   if ("serviceWorker" in navigator) {
@@ -187,6 +194,23 @@ function renderHome() {
   `;
 }
 
+function liveSyncCard(description) {
+  const sync = state.liveSync;
+  const status = sync?.ok
+    ? `上次同步成功：${new Date(sync.updatedAt).toLocaleString("zh-CN")}，比赛 ${sync.matchCount || 0} 场，积分 ${sync.standingCount || 0} 队`
+    : (sync?.error ? `上次同步失败：${sync.error}` : "当前使用本地赛程数据，点击后尝试从 football-data.org 更新。");
+  return `
+    <section class="card live-card">
+      <div>
+        <h3>实时数据更新</h3>
+        <p>${description}</p>
+        <small>${escapeHtml(status)}</small>
+      </div>
+      <button class="primary" data-refresh-live>刷新</button>
+    </section>
+  `;
+}
+
 function renderSchedule() {
   const matches = state.data.matches
     .sort((a, b) => new Date(a.kickoffUtc) - new Date(b.kickoffUtc));
@@ -202,6 +226,7 @@ function renderSchedule() {
     </section>
   `).join("");
   return layout(`${header("全部赛程", "小组赛与淘汰赛统一列表展示")}
+    ${liveSyncCard("赛程比分会按 football-data.org 可用数据更新")}
     ${body || `<section class="card"><h3>暂无赛程</h3><p>当前筛选没有比赛。</p></section>`}
   `);
 }
@@ -248,6 +273,7 @@ function renderTeams() {
     `;
   }).join("");
   return layout(`${header("球队与小组积分", "48 支球队按 A-L 分组展示")}
+    ${liveSyncCard("小组积分会按 football-data.org standings 更新")}
     ${tables}
   `);
 }
@@ -365,6 +391,156 @@ async function refreshRemoteStats() {
   } finally {
     render();
   }
+}
+
+async function refreshFootballData() {
+  try {
+    const payload = await fetchFootballDataCache();
+    const result = applyFootballDataPayload(payload);
+    state.liveSync = {
+      ok: true,
+      updatedAt: payload.updatedAt || new Date().toISOString(),
+      matchCount: result.matchCount,
+      standingCount: result.standingCount,
+      payload
+    };
+    localStorage.setItem("wc_live_sync", JSON.stringify(state.liveSync));
+  } catch (err) {
+    state.liveSync = {
+      ok: false,
+      updatedAt: new Date().toISOString(),
+      error: err.message,
+      payload: state.liveSync?.payload || null
+    };
+    localStorage.setItem("wc_live_sync", JSON.stringify(state.liveSync));
+    showMessage(`实时数据刷新失败：${err.message}\n\n网页版通过 GitHub Actions 生成 football_data_cache.json 后再同步。失败时 App 会继续使用本地数据。`);
+  } finally {
+    render();
+  }
+}
+
+async function fetchFootballDataCache() {
+  const res = await fetch(`${FOOTBALL_DATA_CACHE_URL}?t=${Date.now()}`, { cache: "no-store" });
+  const text = await res.text();
+  if (!res.ok) throw new Error(`实时缓存 HTTP ${res.status}`);
+  if (text.trim().startsWith("<")) throw new Error("实时缓存还没有生成，请先运行 GitHub Actions");
+  let json;
+  try {
+    json = JSON.parse(text);
+  } catch {
+    throw new Error("实时缓存不是有效 JSON");
+  }
+  if (json.error) throw new Error(json.error);
+  return json;
+}
+
+function applyFootballDataPayload(payload, options = {}) {
+  const matchCount = applyFootballMatches(payload.matches || []);
+  const standingCount = applyFootballStandings(payload.standings || []);
+  refreshMaps();
+  if (options.persist !== false) {
+    localStorage.setItem("wc_live_sync_payload", JSON.stringify(payload));
+  }
+  if (!options.silent && (matchCount || standingCount)) {
+    showMessage(`实时数据已更新：赛程 ${matchCount} 场，积分 ${standingCount} 支球队。`);
+  }
+  return { matchCount, standingCount };
+}
+
+function applyFootballMatches(apiMatches) {
+  let updated = 0;
+  for (const apiMatch of apiMatches) {
+    const local = findLocalMatch(apiMatch);
+    if (!local) continue;
+    const score = apiMatch.score?.fullTime || apiMatch.score?.regularTime || {};
+    const homeScore = Number.isInteger(score.home) ? score.home : null;
+    const awayScore = Number.isInteger(score.away) ? score.away : null;
+    local.status = normalizeMatchStatus(apiMatch.status);
+    local.homeScore = homeScore;
+    local.awayScore = awayScore;
+    local.lastSyncedAt = new Date().toISOString();
+    local.liveSummary = apiMatch.status || null;
+    updated += 1;
+  }
+  return updated;
+}
+
+function applyFootballStandings(apiStandings) {
+  let updated = 0;
+  for (const standing of apiStandings) {
+    for (const row of standing.table || []) {
+      const team = findTeamByApi(row.team);
+      if (!team) continue;
+      team.position = row.position ?? team.position;
+      team.played = row.playedGames ?? team.played;
+      team.wins = row.won ?? team.wins;
+      team.draws = row.draw ?? team.draws;
+      team.losses = row.lost ?? team.losses;
+      team.goalsFor = row.goalsFor ?? team.goalsFor;
+      team.goalsAgainst = row.goalsAgainst ?? team.goalsAgainst;
+      team.goalDifference = row.goalDifference ?? (team.goalsFor - team.goalsAgainst);
+      team.points = row.points ?? team.points;
+      updated += 1;
+    }
+  }
+  return updated;
+}
+
+function findLocalMatch(apiMatch) {
+  const home = findTeamByApi(apiMatch.homeTeam);
+  const away = findTeamByApi(apiMatch.awayTeam);
+  if (!home || !away) return null;
+  const apiDay = apiMatch.utcDate ? apiMatch.utcDate.slice(0, 10) : "";
+  return state.data.matches.find((m) =>
+    m.homeTeamId === home.id &&
+    m.awayTeamId === away.id &&
+    (!apiDay || m.kickoffUtc.slice(0, 10) === apiDay)
+  ) || state.data.matches.find((m) =>
+    m.homeTeamId === home.id &&
+    m.awayTeamId === away.id
+  );
+}
+
+function findTeamByApi(apiTeam = {}) {
+  const names = [apiTeam.name, apiTeam.shortName, apiTeam.tla, apiTeam.crest].filter(Boolean).map(normalizeName);
+  return state.data.teams.find((team) => {
+    const aliases = teamAliases(team);
+    return names.some((name) => aliases.includes(name));
+  });
+}
+
+function teamAliases(team) {
+  return [
+    team.nameZh,
+    team.nameEn,
+    team.nameEn?.replace("United States", "USA"),
+    team.nameEn?.replace("Czechia", "Czech Republic"),
+    team.nameEn?.replace("Türkiye", "Turkey"),
+    team.nameEn?.replace("Ivory Coast", "Côte d'Ivoire"),
+    team.nameEn?.replace("DR Congo", "Congo DR"),
+    team.nameEn?.replace("DR Congo", "Congo"),
+    team.nameEn?.replace("South Korea", "Korea Republic"),
+    team.nameEn?.replace("Cape Verde", "Cabo Verde")
+  ].filter(Boolean).map(normalizeName);
+}
+
+function normalizeName(value = "") {
+  return String(value)
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9\u4e00-\u9fa5]/g, "");
+}
+
+function normalizeMatchStatus(status) {
+  if (["FINISHED", "AWARDED"].includes(status)) return "FINISHED";
+  if (["IN_PLAY", "PAUSED", "LIVE"].includes(status)) return "IN_PLAY";
+  return "SCHEDULED";
+}
+
+function refreshMaps() {
+  state.data.teamMap = byId(state.data.teams);
+  state.data.stadiumMap = byId(state.data.stadiums);
 }
 
 function renderTools() {
