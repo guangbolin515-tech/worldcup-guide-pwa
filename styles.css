@@ -378,6 +378,7 @@ button { border: 0; cursor: pointer; }
   text-align: left;
   text-decoration: none;
   color: inherit;
+  border: 0;
 }
 
 .ranking-row, .player-row {

@@ -41,8 +41,13 @@ const statusText = (m) => {
 const scoreText = (m) => Number.isInteger(m.homeScore) && Number.isInteger(m.awayScore) ? `${m.homeScore} : ${m.awayScore}` : "- : -";
 
 function navigate(route) {
+  if (state.route === route) return;
   state.scrollTopOnRender = true;
-  location.hash = route;
+  state.route = route;
+  if (location.hash.replace(/^#/, "") !== route) {
+    location.hash = route;
+  }
+  render();
 }
 
 window.addEventListener("hashchange", () => {
@@ -53,7 +58,11 @@ window.addEventListener("hashchange", () => {
 
 document.addEventListener("click", (event) => {
   const go = event.target.closest("[data-go]");
-  if (go) navigate(go.dataset.go);
+  if (go) {
+    event.preventDefault();
+    navigate(go.dataset.go);
+    return;
+  }
 
   const group = event.target.closest("[data-group]");
   if (group) {
@@ -157,8 +166,10 @@ function render() {
 }
 
 function renderHome() {
-  const today = new Date().toISOString().slice(0, 10);
-  const todayMatches = state.data.matches.filter((m) => new Date(m.kickoffUtc).toISOString().slice(0, 10) === today);
+  const today = fmtDay(new Date());
+  const todayMatches = state.data.matches
+    .filter((m) => fmtDay(m.kickoffUtc) === today)
+    .sort((a, b) => new Date(a.kickoffUtc) - new Date(b.kickoffUtc));
   const cards = [
     ["schedule", "📅", "完整赛程", "104 场比赛，按日期查看"],
     ["teams", "👥", "球队积分", "48 支球队和小组表"],
@@ -187,7 +198,7 @@ function renderHome() {
       <div class="grid">${cards}</div>
       <div class="section-title"><h2>今日焦点</h2><small>${fmtDay(new Date())}</small></div>
       <section class="card">
-        <h3>${todayMatches.length ? "今日比赛" : "今日无比赛"}</h3>
+        <h3>${todayMatches.length ? `今日比赛 · ${todayMatches.length}场` : "今日无比赛"}</h3>
         ${todayMatches.length ? todayMatches.map(matchCard).join("") : "<p>可以查看完整赛程、淘汰赛晋级图和球队资料。</p>"}
       </section>
     </main>
@@ -330,11 +341,11 @@ function playerRow(p) {
 function renderStadiums() {
   return layout(`${header("比赛场馆", "16 座 2026 世界杯承办场馆")}
     ${state.data.stadiums.map((s) => `
-      <a class="card stadium-card clickable-card" href="#stadium/${s.id}" aria-label="查看${s.name}">
+      <button class="card stadium-card clickable-card" data-go="stadium/${s.id}" aria-label="查看${s.name}">
         <img src="${asset(s.imageUrl)}" alt="${s.name}" />
         <h3>${s.name}</h3>
         <p>${s.city} · ${s.country}｜容量 ${Number(s.capacity).toLocaleString("zh-CN")} 人</p>
-      </a>
+      </button>
     `).join("")}
   `);
 }
