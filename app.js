@@ -234,7 +234,7 @@ function renderSchedule() {
 function matchCard(m) {
   return `
     <article class="match-card">
-      <div class="match-meta"><span>${fmtTime(m.kickoffUtc)}</span><span>${m.stage}</span></div>
+      <div class="match-meta"><span>${fmtTime(m.kickoffUtc)}</span><span>${matchStageLabel(m)}</span></div>
       <div class="match-main">
         <div class="team-side">
           <img src="${asset(m.homeFlagUrl)}" alt="${m.homeTeamName}" />
@@ -249,6 +249,10 @@ function matchCard(m) {
       <div class="venue">${m.stadiumName} · ${m.city}</div>
     </article>
   `;
+}
+
+function matchStageLabel(m) {
+  return m.groupName ? `${m.groupName}组 · ${m.stage}` : m.stage;
 }
 
 function renderTeams() {
@@ -594,11 +598,54 @@ function compareTeams(a, b) {
 
 function fifaRank(name) {
   const ranks = {
-    "阿根廷": 1, "法国": 2, "西班牙": 3, "英格兰": 4, "巴西": 5, "荷兰": 6, "葡萄牙": 7,
-    "比利时": 8, "德国": 10, "克罗地亚": 11, "摩洛哥": 12, "哥伦比亚": 13, "乌拉圭": 15,
-    "墨西哥": 15, "美国": 16, "瑞士": 17, "日本": 18, "塞内加尔": 19, "伊朗": 20,
-    "丹麦": 21, "韩国": 23, "奥地利": 24, "澳大利亚": 26, "加拿大": 30, "厄瓜多尔": 31,
-    "埃及": 34, "南非": 56, "捷克": 42, "卡塔尔": 45, "巴拉圭": 48, "波黑": 74
+    "阿根廷": 1,
+    "西班牙": 2,
+    "法国": 3,
+    "英格兰": 4,
+    "葡萄牙": 5,
+    "巴西": 6,
+    "摩洛哥": 7,
+    "荷兰": 8,
+    "比利时": 9,
+    "德国": 10,
+    "克罗地亚": 11,
+    "哥伦比亚": 13,
+    "墨西哥": 14,
+    "塞内加尔": 15,
+    "乌拉圭": 16,
+    "美国": 17,
+    "日本": 18,
+    "瑞士": 19,
+    "伊朗": 20,
+    "土耳其": 22,
+    "厄瓜多尔": 23,
+    "奥地利": 24,
+    "韩国": 25,
+    "澳大利亚": 27,
+    "阿尔及利亚": 28,
+    "埃及": 29,
+    "加拿大": 30,
+    "挪威": 31,
+    "科特迪瓦": 33,
+    "巴拿马": 34,
+    "瑞典": 38,
+    "捷克": 40,
+    "巴拉圭": 41,
+    "苏格兰": 42,
+    "突尼斯": 45,
+    "刚果民主共和国": 46,
+    "乌兹别克斯坦": 50,
+    "卡塔尔": 56,
+    "伊拉克": 57,
+    "南非": 60,
+    "沙特阿拉伯": 61,
+    "约旦": 63,
+    "波黑": 64,
+    "佛得角": 67,
+    "加纳": 73,
+    "库拉索": 82,
+    "海地": 83,
+    "新西兰": 85
   };
   return ranks[name] ? `排名: ${ranks[name]}位` : "排名: 待更新";
 }
