@@ -528,7 +528,9 @@ function teamAliases(team) {
   return [
     team.nameZh,
     team.nameEn,
+    team.nameEn?.replace(" and ", " "),
     team.nameEn?.replace("United States", "USA"),
+    team.nameEn?.replace("Bosnia and Herzegovina", "Bosnia-Herzegovina"),
     team.nameEn?.replace("Czechia", "Czech Republic"),
     team.nameEn?.replace("Türkiye", "Turkey"),
     team.nameEn?.replace("Ivory Coast", "Côte d'Ivoire"),
