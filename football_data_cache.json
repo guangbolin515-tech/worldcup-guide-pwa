@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-13T23:56:52.064Z",
+  "updatedAt": "2026-06-14T02:55:25.659Z",
   "matches": [
     {
       "area": {
@@ -354,11 +354,11 @@
       },
       "id": 537339,
       "utcDate": "2026-06-13T22:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
-      "lastUpdated": "2026-06-13T23:55:47Z",
+      "lastUpdated": "2026-06-14T00:10:33Z",
       "homeTeam": {
         "id": 764,
         "name": "Brazil",
@@ -420,11 +420,11 @@
       },
       "id": 537340,
       "utcDate": "2026-06-14T01:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
-      "lastUpdated": "2026-06-12T00:20:17Z",
+      "lastUpdated": "2026-06-14T02:54:53Z",
       "homeTeam": {
         "id": 836,
         "name": "Haiti",
@@ -440,15 +440,15 @@
         "crest": "https://crests.football-data.org/814.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "AWAY_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         }
       },
       "odds": {
@@ -6369,6 +6369,25 @@
         {
           "position": 1,
           "team": {
+            "id": 8873,
+            "name": "Scotland",
+            "shortName": "Scotland",
+            "tla": "SCO",
+            "crest": "https://crests.football-data.org/814.svg"
+          },
+          "playedGames": 1,
+          "form": null,
+          "won": 1,
+          "draw": 0,
+          "lost": 0,
+          "points": 3,
+          "goalsFor": 1,
+          "goalsAgainst": 0,
+          "goalDifference": 1
+        },
+        {
+          "position": 2,
+          "team": {
             "id": 764,
             "name": "Brazil",
             "shortName": "Brazil",
@@ -6386,7 +6405,7 @@
           "goalDifference": 0
         },
         {
-          "position": 1,
+          "position": 2,
           "team": {
             "id": 815,
             "name": "Morocco",
@@ -6405,7 +6424,7 @@
           "goalDifference": 0
         },
         {
-          "position": 3,
+          "position": 4,
           "team": {
             "id": 836,
             "name": "Haiti",
@@ -6413,34 +6432,15 @@
             "tla": "HAI",
             "crest": "https://crests.football-data.org/haiti.svg"
           },
-          "playedGames": 0,
+          "playedGames": 1,
           "form": null,
           "won": 0,
           "draw": 0,
-          "lost": 0,
+          "lost": 1,
           "points": 0,
           "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0
-        },
-        {
-          "position": 3,
-          "team": {
-            "id": 8873,
-            "name": "Scotland",
-            "shortName": "Scotland",
-            "tla": "SCO",
-            "crest": "https://crests.football-data.org/814.svg"
-          },
-          "playedGames": 0,
-          "form": null,
-          "won": 0,
-          "draw": 0,
-          "lost": 0,
-          "points": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0
+          "goalsAgainst": 1,
+          "goalDifference": -1
         }
       ]
     },
