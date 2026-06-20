@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-20T01:52:16.337Z",
+  "updatedAt": "2026-06-20T06:08:51.510Z",
   "matches": [
     {
       "area": {
@@ -2004,11 +2004,11 @@
       },
       "id": 537341,
       "utcDate": "2026-06-20T00:30:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
-      "lastUpdated": "2026-06-20T01:52:10Z",
+      "lastUpdated": "2026-06-20T02:37:13Z",
       "homeTeam": {
         "id": 764,
         "name": "Brazil",
@@ -2070,11 +2070,11 @@
       },
       "id": 537347,
       "utcDate": "2026-06-20T03:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
-      "lastUpdated": "2026-06-20T03:00:01Z",
+      "lastUpdated": "2026-06-20T05:13:40Z",
       "homeTeam": {
         "id": 803,
         "name": "Turkey",
@@ -2090,15 +2090,15 @@
         "crest": "https://crests.football-data.org/761.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "AWAY_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         }
       },
       "odds": {
@@ -6537,25 +6537,6 @@
         {
           "position": 1,
           "team": {
-            "id": 815,
-            "name": "Morocco",
-            "shortName": "Morocco",
-            "tla": "MAR",
-            "crest": "https://crests.football-data.org/morocco.svg"
-          },
-          "playedGames": 2,
-          "form": null,
-          "won": 1,
-          "draw": 1,
-          "lost": 0,
-          "points": 4,
-          "goalsFor": 2,
-          "goalsAgainst": 1,
-          "goalDifference": 1
-        },
-        {
-          "position": 2,
-          "team": {
             "id": 764,
             "name": "Brazil",
             "shortName": "Brazil",
@@ -6571,6 +6552,25 @@
           "goalsFor": 4,
           "goalsAgainst": 1,
           "goalDifference": 3
+        },
+        {
+          "position": 2,
+          "team": {
+            "id": 815,
+            "name": "Morocco",
+            "shortName": "Morocco",
+            "tla": "MAR",
+            "crest": "https://crests.football-data.org/morocco.svg"
+          },
+          "playedGames": 2,
+          "form": null,
+          "won": 1,
+          "draw": 1,
+          "lost": 0,
+          "points": 4,
+          "goalsFor": 2,
+          "goalsAgainst": 1,
+          "goalDifference": 1
         },
         {
           "position": 3,
@@ -6658,39 +6658,39 @@
         {
           "position": 3,
           "team": {
-            "id": 803,
-            "name": "Turkey",
-            "shortName": "Turkey",
-            "tla": "TUR",
-            "crest": "https://crests.football-data.org/803.svg"
-          },
-          "playedGames": 1,
-          "form": null,
-          "won": 0,
-          "draw": 0,
-          "lost": 1,
-          "points": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 2,
-          "goalDifference": -2
-        },
-        {
-          "position": 4,
-          "team": {
             "id": 761,
             "name": "Paraguay",
             "shortName": "Paraguay",
             "tla": "PAR",
             "crest": "https://crests.football-data.org/761.svg"
           },
-          "playedGames": 1,
+          "playedGames": 2,
+          "form": null,
+          "won": 1,
+          "draw": 0,
+          "lost": 1,
+          "points": 3,
+          "goalsFor": 2,
+          "goalsAgainst": 4,
+          "goalDifference": -2
+        },
+        {
+          "position": 4,
+          "team": {
+            "id": 803,
+            "name": "Turkey",
+            "shortName": "Turkey",
+            "tla": "TUR",
+            "crest": "https://crests.football-data.org/803.svg"
+          },
+          "playedGames": 2,
           "form": null,
           "won": 0,
           "draw": 0,
-          "lost": 1,
+          "lost": 2,
           "points": 0,
-          "goalsFor": 1,
-          "goalsAgainst": 4,
+          "goalsFor": 0,
+          "goalsAgainst": 3,
           "goalDifference": -3
         }
       ]
