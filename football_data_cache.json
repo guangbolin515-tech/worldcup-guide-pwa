@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-20T21:02:36.676Z",
+  "updatedAt": "2026-06-20T22:18:48.318Z",
   "matches": [
     {
       "area": {
@@ -2202,11 +2202,11 @@
       },
       "id": 537353,
       "utcDate": "2026-06-20T20:00:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
-      "lastUpdated": "2026-06-20T20:57:34Z",
+      "lastUpdated": "2026-06-20T22:05:03Z",
       "homeTeam": {
         "id": 759,
         "name": "Germany",
@@ -2222,10 +2222,10 @@
         "crest": "https://crests.football-data.org/787.svg"
       },
       "score": {
-        "winner": "AWAY_TEAM",
+        "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 0,
+          "home": 2,
           "away": 1
         },
         "halfTime": {
@@ -2302,7 +2302,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 176659,
+          "name": "Ning Ma",
+          "type": "REFEREE",
+          "nationality": "China PR"
+        }
+      ]
     },
     {
       "area": {
@@ -6717,25 +6724,6 @@
         {
           "position": 1,
           "team": {
-            "id": 1935,
-            "name": "Ivory Coast",
-            "shortName": "Ivory Coast",
-            "tla": "CIV",
-            "crest": "https://crests.football-data.org/787.svg"
-          },
-          "playedGames": 2,
-          "form": null,
-          "won": 2,
-          "draw": 0,
-          "lost": 0,
-          "points": 6,
-          "goalsFor": 2,
-          "goalsAgainst": 0,
-          "goalDifference": 2
-        },
-        {
-          "position": 2,
-          "team": {
             "id": 759,
             "name": "Germany",
             "shortName": "Germany",
@@ -6744,13 +6732,32 @@
           },
           "playedGames": 2,
           "form": null,
+          "won": 2,
+          "draw": 0,
+          "lost": 0,
+          "points": 6,
+          "goalsFor": 9,
+          "goalsAgainst": 2,
+          "goalDifference": 7
+        },
+        {
+          "position": 2,
+          "team": {
+            "id": 1935,
+            "name": "Ivory Coast",
+            "shortName": "Ivory Coast",
+            "tla": "CIV",
+            "crest": "https://crests.football-data.org/787.svg"
+          },
+          "playedGames": 2,
+          "form": null,
           "won": 1,
           "draw": 0,
           "lost": 1,
           "points": 3,
-          "goalsFor": 7,
+          "goalsFor": 2,
           "goalsAgainst": 2,
-          "goalDifference": 5
+          "goalDifference": 0
         },
         {
           "position": 3,
