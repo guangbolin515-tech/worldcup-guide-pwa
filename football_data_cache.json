@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-23T18:32:17.216Z",
+  "updatedAt": "2026-06-23T20:36:48.576Z",
   "matches": [
     {
       "area": {
@@ -2928,11 +2928,11 @@
       },
       "id": 537405,
       "utcDate": "2026-06-23T17:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
-      "lastUpdated": "2026-06-23T18:31:30Z",
+      "lastUpdated": "2026-06-23T19:04:30Z",
       "homeTeam": {
         "id": 765,
         "name": "Portugal",
@@ -2951,7 +2951,7 @@
         "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 4,
+          "home": 5,
           "away": 0
         },
         "halfTime": {
@@ -2994,11 +2994,11 @@
       },
       "id": 537411,
       "utcDate": "2026-06-23T20:00:00Z",
-      "status": "TIMED",
+      "status": "LIVE",
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
-      "lastUpdated": "2026-06-22T15:20:13Z",
+      "lastUpdated": "2026-06-23T20:36:16Z",
       "homeTeam": {
         "id": 770,
         "name": "England",
@@ -3014,11 +3014,11 @@
         "crest": "https://crests.football-data.org/ghana.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "halfTime": {
           "home": null,
@@ -7311,9 +7311,9 @@
           "draw": 1,
           "lost": 0,
           "points": 4,
-          "goalsFor": 5,
+          "goalsFor": 6,
           "goalsAgainst": 1,
-          "goalDifference": 4
+          "goalDifference": 5
         },
         {
           "position": 2,
@@ -7369,8 +7369,8 @@
           "lost": 2,
           "points": 0,
           "goalsFor": 1,
-          "goalsAgainst": 7,
-          "goalDifference": -6
+          "goalsAgainst": 8,
+          "goalDifference": -7
         }
       ]
     },
@@ -7388,12 +7388,12 @@
             "tla": "ENG",
             "crest": "https://crests.football-data.org/770.svg"
           },
-          "playedGames": 1,
+          "playedGames": 2,
           "form": null,
           "won": 1,
-          "draw": 0,
+          "draw": 1,
           "lost": 0,
-          "points": 3,
+          "points": 4,
           "goalsFor": 4,
           "goalsAgainst": 2,
           "goalDifference": 2
@@ -7407,12 +7407,12 @@
             "tla": "GHA",
             "crest": "https://crests.football-data.org/ghana.svg"
           },
-          "playedGames": 1,
+          "playedGames": 2,
           "form": null,
           "won": 1,
-          "draw": 0,
+          "draw": 1,
           "lost": 0,
-          "points": 3,
+          "points": 4,
           "goalsFor": 1,
           "goalsAgainst": 0,
           "goalDifference": 1
