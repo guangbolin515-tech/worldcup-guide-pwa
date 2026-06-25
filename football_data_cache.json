@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25T20:30:11.693Z",
+  "updatedAt": "2026-06-25T22:04:07.028Z",
   "matches": [
     {
       "area": {
@@ -3574,11 +3574,11 @@
       },
       "id": 537355,
       "utcDate": "2026-06-25T20:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
-      "lastUpdated": "2026-06-25T20:29:35Z",
+      "lastUpdated": "2026-06-25T22:03:13Z",
       "homeTeam": {
         "id": 791,
         "name": "Ecuador",
@@ -3594,15 +3594,15 @@
         "crest": "https://crests.football-data.org/759.svg"
       },
       "score": {
-        "winner": "DRAW",
+        "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 1,
+          "home": 2,
           "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         }
       },
       "odds": {
@@ -3640,11 +3640,11 @@
       },
       "id": 537356,
       "utcDate": "2026-06-25T20:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
-      "lastUpdated": "2026-06-25T20:30:00Z",
+      "lastUpdated": "2026-06-25T22:02:55Z",
       "homeTeam": {
         "id": 9460,
         "name": "Curaçao",
@@ -3664,11 +3664,11 @@
         "duration": "REGULAR",
         "fullTime": {
           "home": 0,
-          "away": 1
+          "away": 2
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         }
       },
       "odds": {
@@ -3740,7 +3740,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 212546,
+          "name": "Katia García",
+          "type": "REFEREE",
+          "nationality": "Mexico"
+        }
+      ]
     },
     {
       "area": {
@@ -3799,7 +3806,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 190010,
+          "name": "Ivan Barton",
+          "type": "REFEREE",
+          "nationality": null
+        }
+      ]
     },
     {
       "area": {
@@ -6866,12 +6880,12 @@
           "playedGames": 3,
           "form": null,
           "won": 2,
-          "draw": 1,
-          "lost": 0,
-          "points": 7,
+          "draw": 0,
+          "lost": 1,
+          "points": 6,
           "goalsFor": 10,
-          "goalsAgainst": 3,
-          "goalDifference": 7
+          "goalsAgainst": 4,
+          "goalDifference": 6
         },
         {
           "position": 2,
@@ -6888,9 +6902,9 @@
           "draw": 0,
           "lost": 1,
           "points": 6,
-          "goalsFor": 3,
+          "goalsFor": 4,
           "goalsAgainst": 2,
-          "goalDifference": 1
+          "goalDifference": 2
         },
         {
           "position": 3,
@@ -6903,13 +6917,13 @@
           },
           "playedGames": 3,
           "form": null,
-          "won": 0,
-          "draw": 2,
+          "won": 1,
+          "draw": 1,
           "lost": 1,
-          "points": 2,
-          "goalsFor": 1,
+          "points": 4,
+          "goalsFor": 2,
           "goalsAgainst": 2,
-          "goalDifference": -1
+          "goalDifference": 0
         },
         {
           "position": 4,
@@ -6927,8 +6941,8 @@
           "lost": 2,
           "points": 1,
           "goalsFor": 1,
-          "goalsAgainst": 8,
-          "goalDifference": -7
+          "goalsAgainst": 9,
+          "goalDifference": -8
         }
       ]
     },
