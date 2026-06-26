@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26T18:13:13.638Z",
+  "updatedAt": "2026-06-26T20:10:16.199Z",
   "matches": [
     {
       "area": {
@@ -3970,11 +3970,11 @@
       },
       "id": 537395,
       "utcDate": "2026-06-26T19:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-26T07:48:25Z",
+      "lastUpdated": "2026-06-26T19:57:59Z",
       "homeTeam": {
         "id": 8872,
         "name": "Norway",
@@ -3990,15 +3990,15 @@
         "crest": "https://crests.football-data.org/773.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "AWAY_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 3
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 3
         }
       },
       "odds": {
@@ -4036,11 +4036,11 @@
       },
       "id": 537396,
       "utcDate": "2026-06-26T19:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-26T07:48:25Z",
+      "lastUpdated": "2026-06-26T20:03:11Z",
       "homeTeam": {
         "id": 804,
         "name": "Senegal",
@@ -4056,15 +4056,15 @@
         "crest": "https://crests.football-data.org/iraq.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       },
       "odds": {
@@ -7237,15 +7237,15 @@
             "tla": "FRA",
             "crest": "https://crests.football-data.org/773.svg"
           },
-          "playedGames": 2,
+          "playedGames": 3,
           "form": null,
-          "won": 2,
+          "won": 3,
           "draw": 0,
           "lost": 0,
-          "points": 6,
-          "goalsFor": 6,
-          "goalsAgainst": 1,
-          "goalDifference": 5
+          "points": 9,
+          "goalsFor": 9,
+          "goalsAgainst": 2,
+          "goalDifference": 7
         },
         {
           "position": 2,
@@ -7256,15 +7256,15 @@
             "tla": "NOR",
             "crest": "https://crests.football-data.org/813.svg"
           },
-          "playedGames": 2,
+          "playedGames": 3,
           "form": null,
           "won": 2,
           "draw": 0,
-          "lost": 0,
+          "lost": 1,
           "points": 6,
-          "goalsFor": 7,
-          "goalsAgainst": 3,
-          "goalDifference": 4
+          "goalsFor": 8,
+          "goalsAgainst": 6,
+          "goalDifference": 2
         },
         {
           "position": 3,
@@ -7275,15 +7275,15 @@
             "tla": "SEN",
             "crest": "https://crests.football-data.org/senegal.svg"
           },
-          "playedGames": 2,
+          "playedGames": 3,
           "form": null,
-          "won": 0,
+          "won": 1,
           "draw": 0,
           "lost": 2,
-          "points": 0,
-          "goalsFor": 3,
+          "points": 3,
+          "goalsFor": 4,
           "goalsAgainst": 6,
-          "goalDifference": -3
+          "goalDifference": -2
         },
         {
           "position": 4,
@@ -7294,15 +7294,15 @@
             "tla": "IRQ",
             "crest": "https://crests.football-data.org/iraq.svg"
           },
-          "playedGames": 2,
+          "playedGames": 3,
           "form": null,
           "won": 0,
           "draw": 0,
-          "lost": 2,
+          "lost": 3,
           "points": 0,
           "goalsFor": 1,
-          "goalsAgainst": 7,
-          "goalDifference": -6
+          "goalsAgainst": 8,
+          "goalDifference": -7
         }
       ]
     },
