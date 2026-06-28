@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T16:49:03.277Z",
+  "updatedAt": "2026-06-28T17:52:28.458Z",
   "matches": [
     {
       "area": {
@@ -4796,7 +4796,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 38806,
+          "name": "João Pinheiro",
+          "type": "REFEREE",
+          "nationality": "Portugal"
+        }
+      ]
     },
     {
       "area": {
