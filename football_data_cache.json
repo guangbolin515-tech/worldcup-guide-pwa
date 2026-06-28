@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T01:53:13.765Z",
+  "updatedAt": "2026-06-28T06:06:24.599Z",
   "matches": [
     {
       "area": {
@@ -4370,7 +4370,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
-      "lastUpdated": "2026-06-27T23:05:20Z",
+      "lastUpdated": "2026-06-28T04:07:40Z",
       "homeTeam": {
         "id": 1836,
         "name": "Panama",
@@ -4436,7 +4436,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
-      "lastUpdated": "2026-06-27T23:04:51Z",
+      "lastUpdated": "2026-06-28T04:07:40Z",
       "homeTeam": {
         "id": 799,
         "name": "Croatia",
@@ -4502,7 +4502,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
-      "lastUpdated": "2026-06-28T01:38:21Z",
+      "lastUpdated": "2026-06-28T04:07:40Z",
       "homeTeam": {
         "id": 818,
         "name": "Colombia",
@@ -4568,7 +4568,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
-      "lastUpdated": "2026-06-28T01:41:57Z",
+      "lastUpdated": "2026-06-28T04:07:40Z",
       "homeTeam": {
         "id": 1934,
         "name": "Congo DR",
@@ -4630,11 +4630,11 @@
       },
       "id": 537401,
       "utcDate": "2026-06-28T02:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-20T15:20:13Z",
+      "lastUpdated": "2026-06-28T04:36:33Z",
       "homeTeam": {
         "id": 8049,
         "name": "Jordan",
@@ -4650,15 +4650,15 @@
         "crest": "https://crests.football-data.org/762.png"
       },
       "score": {
-        "winner": null,
+        "winner": "AWAY_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 3
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 2
         }
       },
       "odds": {
@@ -4696,11 +4696,11 @@
       },
       "id": 537402,
       "utcDate": "2026-06-28T02:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-20T15:20:13Z",
+      "lastUpdated": "2026-06-28T04:07:40Z",
       "homeTeam": {
         "id": 778,
         "name": "Algeria",
@@ -4716,15 +4716,15 @@
         "crest": "https://crests.football-data.org/816.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 3
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         }
       },
       "odds": {
@@ -4762,11 +4762,11 @@
       },
       "id": 537417,
       "utcDate": "2026-06-28T19:00:00Z",
-      "status": "TIMED",
+      "status": "2026-06-29 19:00:00Z",
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-20T15:20:13Z",
+      "lastUpdated": "2026-06-28T05:22:13Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -7390,15 +7390,15 @@
             "tla": "ARG",
             "crest": "https://crests.football-data.org/762.png"
           },
-          "playedGames": 2,
+          "playedGames": 3,
           "form": null,
-          "won": 2,
+          "won": 3,
           "draw": 0,
           "lost": 0,
-          "points": 6,
-          "goalsFor": 5,
-          "goalsAgainst": 0,
-          "goalDifference": 5
+          "points": 9,
+          "goalsFor": 8,
+          "goalsAgainst": 1,
+          "goalDifference": 7
         },
         {
           "position": 2,
@@ -7409,14 +7409,14 @@
             "tla": "AUT",
             "crest": "https://crests.football-data.org/816.svg"
           },
-          "playedGames": 2,
+          "playedGames": 3,
           "form": null,
           "won": 1,
-          "draw": 0,
+          "draw": 1,
           "lost": 1,
-          "points": 3,
-          "goalsFor": 3,
-          "goalsAgainst": 3,
+          "points": 4,
+          "goalsFor": 6,
+          "goalsAgainst": 6,
           "goalDifference": 0
         },
         {
@@ -7428,14 +7428,14 @@
             "tla": "ALG",
             "crest": "https://crests.football-data.org/algeria.svg"
           },
-          "playedGames": 2,
+          "playedGames": 3,
           "form": null,
           "won": 1,
-          "draw": 0,
+          "draw": 1,
           "lost": 1,
-          "points": 3,
-          "goalsFor": 2,
-          "goalsAgainst": 4,
+          "points": 4,
+          "goalsFor": 5,
+          "goalsAgainst": 7,
           "goalDifference": -2
         },
         {
@@ -7447,15 +7447,15 @@
             "tla": "JOR",
             "crest": "https://crests.football-data.org/8049.png"
           },
-          "playedGames": 2,
+          "playedGames": 3,
           "form": null,
           "won": 0,
           "draw": 0,
-          "lost": 2,
+          "lost": 3,
           "points": 0,
-          "goalsFor": 2,
-          "goalsAgainst": 5,
-          "goalDifference": -3
+          "goalsFor": 3,
+          "goalsAgainst": 8,
+          "goalDifference": -5
         }
       ]
     },
