@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T23:42:23.736Z",
+  "updatedAt": "2026-06-28T01:53:13.765Z",
   "matches": [
     {
       "area": {
@@ -4498,11 +4498,11 @@
       },
       "id": 537407,
       "utcDate": "2026-06-27T23:30:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
-      "lastUpdated": "2026-06-27T23:42:11Z",
+      "lastUpdated": "2026-06-28T01:38:21Z",
       "homeTeam": {
         "id": 818,
         "name": "Colombia",
@@ -4525,8 +4525,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       },
       "odds": {
@@ -4564,11 +4564,11 @@
       },
       "id": 537408,
       "utcDate": "2026-06-27T23:30:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
-      "lastUpdated": "2026-06-27T23:41:45Z",
+      "lastUpdated": "2026-06-28T01:41:57Z",
       "homeTeam": {
         "id": 1934,
         "name": "Congo DR",
@@ -4584,15 +4584,15 @@
         "crest": "https://crests.football-data.org/8070.png"
       },
       "score": {
-        "winner": "DRAW",
+        "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 0,
-          "away": 0
+          "home": 3,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         }
       },
       "odds": {
@@ -4664,7 +4664,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 37278,
+          "name": "István Kovács",
+          "type": "REFEREE",
+          "nationality": "Romania"
+        }
+      ]
     },
     {
       "area": {
@@ -4723,7 +4730,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 236055,
+          "name": "Il'giz Tantashev",
+          "type": "REFEREE",
+          "nationality": "Uzbekistan"
+        }
+      ]
     },
     {
       "area": {
@@ -7499,13 +7513,13 @@
           },
           "playedGames": 3,
           "form": null,
-          "won": 0,
-          "draw": 2,
+          "won": 1,
+          "draw": 1,
           "lost": 1,
-          "points": 2,
-          "goalsFor": 1,
-          "goalsAgainst": 2,
-          "goalDifference": -1
+          "points": 4,
+          "goalsFor": 4,
+          "goalsAgainst": 3,
+          "goalDifference": 1
         },
         {
           "position": 4,
@@ -7519,12 +7533,12 @@
           "playedGames": 3,
           "form": null,
           "won": 0,
-          "draw": 1,
-          "lost": 2,
-          "points": 1,
-          "goalsFor": 1,
-          "goalsAgainst": 8,
-          "goalDifference": -7
+          "draw": 0,
+          "lost": 3,
+          "points": 0,
+          "goalsFor": 2,
+          "goalsAgainst": 11,
+          "goalDifference": -9
         }
       ]
     },
