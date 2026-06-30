@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-30T13:26:20.684Z",
+  "updatedAt": "2026-06-30T15:59:10.586Z",
   "matches": [
     {
       "area": {
@@ -5084,7 +5084,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 28805,
+          "name": "Jesús Valenzuela",
+          "type": "REFEREE",
+          "nationality": "Venezuela"
+        }
+      ]
     },
     {
       "area": {
