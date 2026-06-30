@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-30T01:26:30.559Z",
+  "updatedAt": "2026-06-30T05:38:31.329Z",
   "matches": [
     {
       "area": {
@@ -4972,11 +4972,11 @@
       },
       "id": 537418,
       "utcDate": "2026-06-30T01:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-30T01:26:10Z",
+      "lastUpdated": "2026-06-30T04:07:35Z",
       "homeTeam": {
         "id": 8601,
         "name": "Netherlands",
@@ -4992,15 +4992,27 @@
         "crest": "https://crests.football-data.org/morocco.svg"
       },
       "score": {
-        "winner": "DRAW",
-        "duration": "REGULAR",
+        "winner": null,
+        "duration": "PENALTY_SHOOTOUT",
         "fullTime": {
+          "home": 4,
+          "away": 4
+        },
+        "halfTime": {
           "home": 0,
           "away": 0
         },
-        "halfTime": {
-          "home": null,
-          "away": null
+        "regularTime": {
+          "home": 1,
+          "away": 1
+        },
+        "extraTime": {
+          "home": 0,
+          "away": 0
+        },
+        "penalties": {
+          "home": 3,
+          "away": 3
         }
       },
       "odds": {
