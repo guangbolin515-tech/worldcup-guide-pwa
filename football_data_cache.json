@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-01T23:48:59.422Z",
+  "updatedAt": "2026-07-02T01:51:30.127Z",
   "matches": [
     {
       "area": {
@@ -5318,7 +5318,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-07-01T23:03:13Z",
+      "lastUpdated": "2026-07-01T22:54:56Z",
       "homeTeam": {
         "id": 805,
         "name": "Belgium",
@@ -5335,7 +5335,7 @@
       },
       "score": {
         "winner": "HOME_TEAM",
-        "duration": "EXTRA_TIME",
+        "duration": "REGULAR",
         "fullTime": {
           "home": 3,
           "away": 2
@@ -5388,11 +5388,11 @@
       },
       "id": 537421,
       "utcDate": "2026-07-02T00:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-30T15:20:13Z",
+      "lastUpdated": "2026-07-02T01:51:09Z",
       "homeTeam": {
         "id": 771,
         "name": "United States",
@@ -5408,15 +5408,15 @@
         "crest": "https://crests.football-data.org/bosnia.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       },
       "odds": {
