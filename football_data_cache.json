@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-02T20:08:33.498Z",
+  "updatedAt": "2026-07-02T21:21:21.862Z",
   "matches": [
     {
       "area": {
@@ -5454,11 +5454,11 @@
       },
       "id": 537420,
       "utcDate": "2026-07-02T19:00:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-07-02T19:56:21Z",
+      "lastUpdated": "2026-07-02T21:08:24Z",
       "homeTeam": {
         "id": 760,
         "name": "Spain",
@@ -5477,7 +5477,7 @@
         "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 1,
+          "home": 3,
           "away": 0
         },
         "halfTime": {
@@ -5554,7 +5554,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 215543,
+          "name": "Espen Eskås",
+          "type": "REFEREE",
+          "nationality": "Norway"
+        }
+      ]
     },
     {
       "area": {
