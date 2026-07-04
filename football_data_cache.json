@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T22:32:55.519Z",
+  "updatedAt": "2026-07-04T23:36:53.192Z",
   "matches": [
     {
       "area": {
@@ -5936,11 +5936,11 @@
       },
       "id": 537375,
       "utcDate": "2026-07-04T21:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-07-04T22:32:42Z",
+      "lastUpdated": "2026-07-04T23:10:57Z",
       "homeTeam": {
         "id": 761,
         "name": "Paraguay",
@@ -5956,11 +5956,11 @@
         "crest": "https://crests.football-data.org/773.svg"
       },
       "score": {
-        "winner": "DRAW",
+        "winner": "AWAY_TEAM",
         "duration": "REGULAR",
         "fullTime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "halfTime": {
           "home": 0,
