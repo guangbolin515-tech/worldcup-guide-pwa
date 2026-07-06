@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T16:36:49.690Z",
+  "updatedAt": "2026-07-06T18:28:18.774Z",
   "matches": [
     {
       "area": {
@@ -6168,7 +6168,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 11580,
+          "name": "Anthony Taylor",
+          "type": "REFEREE",
+          "nationality": "England"
+        }
+      ]
     },
     {
       "area": {
