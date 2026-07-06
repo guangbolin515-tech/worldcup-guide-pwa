@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T21:52:09.875Z",
+  "updatedAt": "2026-07-06T22:55:21.694Z",
   "matches": [
     {
       "area": {
@@ -6234,7 +6234,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 129250,
+          "name": "Adham Makhadmeh",
+          "type": "REFEREE",
+          "nationality": "Jordan"
+        }
+      ]
     },
     {
       "area": {
