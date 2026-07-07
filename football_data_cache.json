@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07T21:00:47.350Z",
+  "updatedAt": "2026-07-07T22:19:06.891Z",
   "matches": [
     {
       "area": {
@@ -6332,11 +6332,11 @@
       },
       "id": 537382,
       "utcDate": "2026-07-07T20:00:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-07-07T20:55:00Z",
+      "lastUpdated": "2026-07-07T22:18:58Z",
       "homeTeam": {
         "id": 788,
         "name": "Switzerland",
