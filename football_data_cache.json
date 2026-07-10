@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-10T15:17:22.182Z",
+  "updatedAt": "2026-07-10T17:10:59.100Z",
   "matches": [
     {
       "area": {
@@ -6510,7 +6510,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 11605,
+          "name": "Michael Oliver",
+          "type": "REFEREE",
+          "nationality": "England"
+        }
+      ]
     },
     {
       "area": {
