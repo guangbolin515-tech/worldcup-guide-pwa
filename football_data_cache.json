@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-11T18:03:58.047Z",
+  "updatedAt": "2026-07-11T19:19:58.500Z",
   "matches": [
     {
       "area": {
@@ -6576,7 +6576,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 9374,
+          "name": "Clément Turpin",
+          "type": "REFEREE",
+          "nationality": "France"
+        }
+      ]
     },
     {
       "area": {
