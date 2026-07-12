@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-11T23:01:48.599Z",
+  "updatedAt": "2026-07-12T00:04:36.822Z",
   "matches": [
     {
       "area": {
@@ -6542,11 +6542,11 @@
       },
       "id": 537385,
       "utcDate": "2026-07-11T21:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "matchday": null,
       "stage": "QUARTER_FINALS",
       "group": null,
-      "lastUpdated": "2026-07-11T23:01:27Z",
+      "lastUpdated": "2026-07-11T23:53:31Z",
       "homeTeam": {
         "id": 8872,
         "name": "Norway",
@@ -6562,14 +6562,22 @@
         "crest": "https://crests.football-data.org/770.svg"
       },
       "score": {
-        "winner": "HOME_TEAM",
-        "duration": "REGULAR",
+        "winner": "AWAY_TEAM",
+        "duration": "EXTRA_TIME",
         "fullTime": {
-          "home": 2,
-          "away": 1
+          "home": 1,
+          "away": 2
         },
         "halfTime": {
           "home": 1,
+          "away": 1
+        },
+        "regularTime": {
+          "home": null,
+          "away": null
+        },
+        "extraTime": {
+          "home": 0,
           "away": 1
         }
       },
