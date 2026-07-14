@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14T19:00:45.895Z",
+  "updatedAt": "2026-07-14T20:19:21.704Z",
   "matches": [
     {
       "area": {
@@ -6690,11 +6690,11 @@
       },
       "id": 537387,
       "utcDate": "2026-07-14T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "matchday": null,
       "stage": "SEMI_FINALS",
       "group": null,
-      "lastUpdated": "2026-07-14T05:20:10Z",
+      "lastUpdated": "2026-07-14T20:18:59Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -6710,15 +6710,15 @@
         "crest": "https://crests.football-data.org/760.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "AWAY_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         }
       },
       "odds": {
