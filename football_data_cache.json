@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-15T18:32:49.183Z",
+  "updatedAt": "2026-07-15T19:47:28.677Z",
   "matches": [
     {
       "area": {
@@ -6756,11 +6756,11 @@
       },
       "id": 537388,
       "utcDate": "2026-07-15T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "matchday": null,
       "stage": "SEMI_FINALS",
       "group": null,
-      "lastUpdated": "2026-07-15T05:20:10Z",
+      "lastUpdated": "2026-07-15T19:46:49Z",
       "homeTeam": {
         "id": 770,
         "name": "England",
@@ -6776,11 +6776,11 @@
         "crest": "https://crests.football-data.org/762.png"
       },
       "score": {
-        "winner": null,
+        "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "halfTime": {
           "home": null,
