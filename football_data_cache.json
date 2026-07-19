@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19T21:07:29.080Z",
+  "updatedAt": "2026-07-19T22:04:22.170Z",
   "matches": [
     {
       "area": {
@@ -6888,11 +6888,11 @@
       },
       "id": 537390,
       "utcDate": "2026-07-19T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "LIVE",
       "matchday": null,
       "stage": "FINAL",
       "group": null,
-      "lastUpdated": "2026-07-19T21:07:25Z",
+      "lastUpdated": "2026-07-19T22:03:57Z",
       "homeTeam": {
         "id": 760,
         "name": "Spain",
@@ -6908,13 +6908,21 @@
         "crest": "https://crests.football-data.org/762.png"
       },
       "score": {
-        "winner": "DRAW",
+        "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "halfTime": {
+          "home": 0,
+          "away": 0
+        },
+        "regularTime": {
+          "home": null,
+          "away": null
+        },
+        "extraTime": {
           "home": 0,
           "away": 0
         }
