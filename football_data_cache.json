@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19T22:04:22.170Z",
+  "updatedAt": "2026-07-19T23:02:40.808Z",
   "matches": [
     {
       "area": {
@@ -6888,11 +6888,11 @@
       },
       "id": 537390,
       "utcDate": "2026-07-19T19:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "matchday": null,
       "stage": "FINAL",
       "group": null,
-      "lastUpdated": "2026-07-19T22:03:57Z",
+      "lastUpdated": "2026-07-19T22:25:01Z",
       "homeTeam": {
         "id": 760,
         "name": "Spain",
@@ -6909,7 +6909,7 @@
       },
       "score": {
         "winner": "HOME_TEAM",
-        "duration": "REGULAR",
+        "duration": "EXTRA_TIME",
         "fullTime": {
           "home": 1,
           "away": 0
@@ -6923,7 +6923,7 @@
           "away": null
         },
         "extraTime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         }
       },
